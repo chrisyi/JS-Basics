@@ -6,6 +6,10 @@ var name = 'Tyler';
 
   //Code Here
 
+  function isTyler (name) {
+    return name === 'Tyler';
+  }
+
 //////////////////PROBLEM 2////////////////////
 
 
@@ -14,6 +18,10 @@ var name = 'Tyler';
 
   //Code Here
 
+function getName() {
+    var name = prompt("What is your name?");
+    return name;
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -24,6 +32,9 @@ var name = 'Tyler';
 
   //Code Here
 
+function welcome() {
+    alert("Welcome, " + getName());
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -34,6 +45,8 @@ var name = 'Tyler';
 
   //Answer Here
 
+  //    Both are what is taken in by the function but parameters are written as variables while 
+  //        arguments are the variables inputted in by user for the function to act upon
 
 //////////////////PROBLEM 5////////////////////
 
@@ -44,7 +57,8 @@ var name = 'Tyler';
 
   //Answer Here
 
-
+//  Falsey values are false, 0, '', null, undefined, and NaN.  
+//      Can test for falsey by using Boolean(value) and returning false
 
 //////////////////PROBLEM 6////////////////////
 
@@ -54,15 +68,19 @@ var name = 'Tyler';
 
   //Code Here
   
-
+function myName() {
+    return 'Chris';
+}
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
 
+var newMyName = myName;
+
 //Now alert the result of invoking newMyName
 
-
+    alert(newMyName);
 
 //////////////////PROBLEM 7////////////////////
 
@@ -72,8 +90,20 @@ var name = 'Tyler';
 
   //Code Here
 
+function outerFn() {
+    return function () {
+        return 'Chris';
+    }
+}
+
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
 
+var innerFn = outerFn();
+
 //Now invoke innerFn.
+
+innerFn // === function() {return "Chris"}
+innerFn() // === "Chris"
+
